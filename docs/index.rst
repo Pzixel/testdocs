@@ -1,16 +1,13 @@
-.. _docs-index:
+.. Idris Manual documentation master file, created by
+   sphinx-quickstart on Sat Feb 28 20:41:47 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
-#########################
-Blabla
-#########################
-
-Bla
-
-.. note::
-   Note here
+Documentation hoohjoh
+======================================
 
 .. toctree::
    :maxdepth: 1
 
    interfaces/index
-   proofs/index
+   proofs/index 
