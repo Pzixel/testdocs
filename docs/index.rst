@@ -1,30 +1,31 @@
 Functions:
 ==========
 
--  ```owner()`` <testlabel>`__
+-  ```owner()`` <#IUniswapV3Factory-owner-->`__
 
--  [Foo][IUniswapV3Factory-feeAmountTickSpacing-uint24-]
+-  :ref:`Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
 
--  `getPool(address tokenA, address tokenB, uint24
-   fee) <#IUniswapV3Factory-getPool-address-address-uint24->`__
+-  :ref:`getPool(address tokenA, address tokenB, uint24   fee) <IUniswapV3Factory-getPool-address-address-uint24->`__
 
 -  ```createPool(address tokenA, address tokenB, uint24 fee)`` <#IUniswapV3Factory-createPool-address-address-uint24->`__
 
--  ```setOwner(address _owner)`` <IUniswapV3Factory-setOwner-address->`__
+-  ```setOwner(address _owner)`` <#IUniswapV3Factory-setOwner-address->`__
 
--  ```enableFeeAmount(uint24 fee, int24 tickSpacing)`` <IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
+-  ```enableFeeAmount(uint24 fee, int24 tickSpacing)`` <#IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
 
 Events:
 =======
 
--  ```OwnerChanged(address oldOwner, address newOwner)`` <IUniswapV3Factory-OwnerChanged-address-address->`__
+-  ```OwnerChanged(address oldOwner, address newOwner)`` <#IUniswapV3Factory-OwnerChanged-address-address->`__
 
--  ```PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)`` <IUniswapV3Factory-PoolCreated-address-address-uint24-int24-address->`__
+-  ```PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)`` <#IUniswapV3Factory-PoolCreated-address-address-uint24-int24-address->`__
 
--  ```FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` <IUniswapV3Factory-FeeAmountEnabled-uint24-int24->`__
+-  ```FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` <#IUniswapV3Factory-FeeAmountEnabled-uint24-int24->`__
 
-.. \_testlabel: Function ``owner() → address`` [#bla]
-=====================================================
+.. _IUniswapV3Factory-owner--:
+
+Function ``owner() → address``
+==============================
 
 Can be changed by the current owner via setOwner
 
@@ -47,6 +48,8 @@ Parameters:
 -  ``fee``: The enabled fee, denominated in hundredths of a bip. Returns
    0 in case of unenabled fee
 
+.. _return-values-1:
+
 Return Values:
 --------------
 
@@ -60,6 +63,8 @@ Function ``getPool(address tokenA, address tokenB, uint24 fee) → address pool`
 tokenA and tokenB may be passed in either token0/token1 or token1/token0
 order
 
+.. _parameters-1:
+
 Parameters:
 -----------
 
@@ -69,6 +74,8 @@ Parameters:
 
 -  ``fee``: The fee collected upon every swap in the pool, denominated
    in hundredths of a bip
+
+.. _return-values-2:
 
 Return Values:
 --------------
@@ -88,6 +95,8 @@ is invalid, or the token arguments
 
 are invalid.
 
+.. _parameters-2:
+
 Parameters:
 -----------
 
@@ -96,6 +105,8 @@ Parameters:
 -  ``tokenB``: The other of the two tokens in the desired pool
 
 -  ``fee``: The desired fee for the pool
+
+.. _return-values-3:
 
 Return Values:
 --------------
@@ -109,6 +120,8 @@ Function ``setOwner(address _owner)``
 
 Must be called by the current owner
 
+.. _parameters-3:
+
 Parameters:
 -----------
 
@@ -121,11 +134,13 @@ Function ``enableFeeAmount(uint24 fee, int24 tickSpacing)``
 
 Fee amounts may never be removed once enabled
 
+.. _parameters-4:
+
 Parameters:
 -----------
 
 -  ``fee``: The fee amount to enable, denominated in hundredths of a bip
-   (i.e. 1e-6)
+   (i.e. 1e-6)
 
 -  ``tickSpacing``: The spacing between ticks to be enforced for all
    pools created with the given fee amount
@@ -136,6 +151,8 @@ Event ``OwnerChanged(address oldOwner, address newOwner)``
 ==========================================================
 
 No description
+
+.. _parameters-5:
 
 Parameters:
 -----------
@@ -150,6 +167,8 @@ Event ``PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacin
 ==================================================================================================
 
 No description
+
+.. _parameters-6:
 
 Parameters:
 -----------
@@ -172,6 +191,8 @@ Event ``FeeAmountEnabled(uint24 fee, int24 tickSpacing)``
 =========================================================
 
 No description
+
+.. _parameters-7:
 
 Parameters:
 -----------
