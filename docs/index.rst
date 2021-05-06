@@ -1,18 +1,21 @@
 Functions:
 ==========
 
--  ```owner()`` <#IUniswapV3Factory-owner-->`__
+-  :ref:`owner()  <IUniswapV3Factory-owner-->`
 
--  :ref:`Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`
+-  :ref:`feeAmountTickSpacing(uint24
+   fee)  <IUniswapV3Factory-feeAmountTickSpacing-uint24->`
 
--  :ref:`getPool(address tokenA, address tokenB, uint24   fee) <IUniswapV3Factory-getPool-address-address-uint24->`
+-  :ref:`getPool(address tokenA, address tokenB, uint24
+   fee)  <IUniswapV3Factory-getPool-address-address-uint24->`
 
--  `createPool(address tokenA, address tokenB, uint24
-   fee) <#IUniswapV3Factory-createPool-address-address-uint24->`__
+-  :ref:`createPool(address tokenA, address tokenB, uint24
+   fee)  <IUniswapV3Factory-createPool-address-address-uint24->`
 
--  `setOwner(address \_owner) <IUniswapV3Factory-setOwner-address->`__
+-  :ref:`setOwner(address \_owner)  <IUniswapV3Factory-setOwner-address->`
 
--  ```enableFeeAmount(uint24 fee, int24 tickSpacing)`` <#IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
+-  :ref:`enableFeeAmount(uint24 fee, int24
+   tickSpacing)  <IUniswapV3Factory-enableFeeAmount-uint24-int24->`
 
 Events:
 =======
