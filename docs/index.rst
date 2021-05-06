@@ -3,12 +3,11 @@ Functions:
 
 -  ```owner()`` <testlabel>`__
 
--  :ref:`Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
+-  `Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
 
--  :ref:`getPool(address tokenA, address tokenB, uint24
-   fee) <IUniswapV3Factory-getPool-address-address-uint24->`__
+-  :ref:`feeAmountTickSpacing(uint24 fee) <IUniswapV3Factory-feeAmountTickSpacing-uint24->`
 
--  ```createPool(address tokenA, address tokenB, uint24 fee)`` <IUniswapV3Factory-createPool-address-address-uint24->`__
+-  :ref:`feeAmountTickSpacing(uint24 fee)<IUniswapV3Factory-feeAmountTickSpacing-uint24->`
 
 -  ```setOwner(address _owner)`` <IUniswapV3Factory-setOwner-address->`__
 
