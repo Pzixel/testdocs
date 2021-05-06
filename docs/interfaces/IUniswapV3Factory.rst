@@ -24,7 +24,7 @@ When we prove it, the ``judgment`` is,
 | 1+1=2 true |
 +------------+
 
-Or if the ``proposition`` is,
+Or if the ``proposiasgasgasgtion`` is,
 
 +-------+
 | 1+1=3 |
