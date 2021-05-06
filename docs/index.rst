@@ -3,9 +3,9 @@ Functions:
 
 -  ```owner()`` <#IUniswapV3Factory-owner-->`__
 
--  :ref:`Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
+-  :ref:`Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`
 
--  :ref:`getPool(address tokenA, address tokenB, uint24   fee) <IUniswapV3Factory-getPool-address-address-uint24->`__
+-  :ref:`getPool(address tokenA, address tokenB, uint24   fee) <IUniswapV3Factory-getPool-address-address-uint24->`
 
 -  ```createPool(address tokenA, address tokenB, uint24 fee)`` <#IUniswapV3Factory-createPool-address-address-uint24->`__
 
