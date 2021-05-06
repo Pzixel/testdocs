@@ -3,9 +3,9 @@ Functions:
 
 -  ```owner()`` <testlabel>`__
 
--  :ref:`feeAmountTickSpacing(uint24 fee)<IUniswapV3Factory-feeAmountTickSpacing-uint24->`
+-  `Foo <IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
 
--  ```getPool(address tokenA, address tokenB, uint24 fee)`` :ref:`_IUniswapV3Factory-feeAmountTickSpacing-uint24-`
+-  ```getPool(address tokenA, address tokenB, uint24 fee)`` <IUniswapV3Factory-getPool-address-address-uint24->`__
 
 -  ```createPool(address tokenA, address tokenB, uint24 fee)`` <IUniswapV3Factory-createPool-address-address-uint24->`__
 
