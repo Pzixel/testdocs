@@ -1,6 +1,9 @@
 The Uniswap V3 Factory facilitates creation of Uniswap V3 pools and
 control over the protocol fees
 
+-  Functions
+-  Events
+
 Functions
 =========
 
@@ -116,14 +119,14 @@ Events
 ======
 
 ``OwnerChanged(address oldOwner, address newOwner)``
-====================================================
+----------------------------------------------------
 
-No description ## Parameters: - ``oldOwner``: The owner before the owner
-was changed
+No description ### Parameters: - ``oldOwner``: The owner before the
+owner was changed
 
--  ``newOwner``: The owner after the owner was changed #
+-  ``newOwner``: The owner after the owner was changed ##
    ``PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)``
-   No description ## Parameters:
+   No description ### Parameters:
 
 -  ``token0``: The first token of the pool by address sort order
 
@@ -135,9 +138,9 @@ was changed
 -  ``tickSpacing``: The minimum number of ticks between initialized
    ticks
 
--  ``pool``: The address of the created pool #
-   ``FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` No description ##
-   Parameters:
+-  ``pool``: The address of the created pool ##
+   ``FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` No description
+   ### Parameters:
 
 -  ``fee``: The enabled fee, denominated in hundredths of a bip
 
