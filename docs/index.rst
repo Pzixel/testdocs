@@ -1,26 +1,26 @@
 Functions:
 ==========
 
--  ```owner()`` <#testlabel>`__
+-  ```owner()`` <testlabel>`__
 
--  ```feeAmountTickSpacing(uint24 fee)`` <#IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
+-  ```feeAmountTickSpacing(uint24 fee)`` <IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
 
--  ```getPool(address tokenA, address tokenB, uint24 fee)`` <#IUniswapV3Factory-getPool-address-address-uint24->`__
+-  ```getPool(address tokenA, address tokenB, uint24 fee)`` <IUniswapV3Factory-getPool-address-address-uint24->`__
 
--  ```createPool(address tokenA, address tokenB, uint24 fee)`` <#IUniswapV3Factory-createPool-address-address-uint24->`__
+-  ```createPool(address tokenA, address tokenB, uint24 fee)`` <IUniswapV3Factory-createPool-address-address-uint24->`__
 
--  ```setOwner(address _owner)`` <#IUniswapV3Factory-setOwner-address->`__
+-  ```setOwner(address _owner)`` <IUniswapV3Factory-setOwner-address->`__
 
--  ```enableFeeAmount(uint24 fee, int24 tickSpacing)`` <#IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
+-  ```enableFeeAmount(uint24 fee, int24 tickSpacing)`` <IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
 
 Events:
 =======
 
--  ```OwnerChanged(address oldOwner, address newOwner)`` <#IUniswapV3Factory-OwnerChanged-address-address->`__
+-  ```OwnerChanged(address oldOwner, address newOwner)`` <IUniswapV3Factory-OwnerChanged-address-address->`__
 
--  ```PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)`` <#IUniswapV3Factory-PoolCreated-address-address-uint24-int24-address->`__
+-  ```PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)`` <IUniswapV3Factory-PoolCreated-address-address-uint24-int24-address->`__
 
--  ```FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` <#IUniswapV3Factory-FeeAmountEnabled-uint24-int24->`__
+-  ```FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` <IUniswapV3Factory-FeeAmountEnabled-uint24-int24->`__
 
 .. \_testlabel: Function ``owner() → address`` [#bla]
 =====================================================
