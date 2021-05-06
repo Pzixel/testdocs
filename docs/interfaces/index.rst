@@ -7,6 +7,6 @@ Some interfaces here!
 Bla
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
 
    IUniswapV3Factory
