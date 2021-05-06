@@ -7,214 +7,204 @@ some fundamental concepts:
 -  Definitional and propositional equalities
 -  Axiomatic and constructive approaches
 
-Functions:
-==========
+Propositions and Judgments
+==========================
 
--  `owner() <#IUniswapV3Factory-owner-->`__
+Propositions are the subject of our proofs. Before the proof, we can't
+formally say if they are true or not. If the proof is successful then the
+result is a 'judgment'.  For instance, if the ``proposition`` is,
 
--  `feeAmountTickSpacing(uint24
-   fee) <#IUniswapV3Factory-feeAmountTickSpacing-uint24->`__
++-------+
+| 1+1=2 |
++-------+
 
--  `getPool(address tokenA, address tokenB, uint24
-   fee) <#IUniswapV3Factory-getPool-address-address-uint24->`__
+When we prove it, the ``judgment`` is,
 
--  `createPool(address tokenA, address tokenB, uint24
-   fee) <#IUniswapV3Factory-createPool-address-address-uint24->`__
++------------+
+| 1+1=2 true |
++------------+
 
--  `setOwner(address \_owner) <#IUniswapV3Factory-setOwner-address->`__
+Or if the ``proposition`` is,
 
--  `enableFeeAmount(uint24 fee, int24
-   tickSpacing) <#IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
++-------+
+| 1+1=3 |
++-------+
 
-Events:
-=======
+we can't prove it is true, but it is still a valid proposition and perhaps we
+can prove it is false so the ``judgment`` is,
 
--  `OwnerChanged(address oldOwner, address
-   newOwner) <#IUniswapV3Factory-OwnerChanged-address-address->`__
++-------------+
+| 1+1=3 false |
++-------------+
 
--  `PoolCreated(address token0, address token1, uint24 fee, int24
-   tickSpacing, address
-   pool) <#IUniswapV3Factory-PoolCreated-address-address-uint24-int24-address->`__
+This may seem a bit pedantic but it is important to be careful: in mathematics
+not every proposition is true or false. For instance, a proposition may be
+unproven or even unprovable.
 
--  `FeeAmountEnabled(uint24 fee, int24
-   tickSpacing) <#IUniswapV3Factory-FeeAmountEnabled-uint24-int24->`__
+So the logic here is different from the logic that comes from boolean algebra.
+In that case what is not true is false and what is not false is true. The logic
+we are using here does not have this law, the "Law of Excluded Middle", so we
+cannot use it.
 
-.. _IUniswapV3Factory-owner--:
+A false proposition is taken to be a contradiction and if we have a
+contradiction then we can prove anything, so we need to avoid this. Some
+languages, used in proof assistants, prevent contradictions.
 
-Function ``owner() → address``
-==============================
+The logic we are using is called constructive (or sometimes intuitional)
+because we are constructing a 'database' of judgments.
 
-Can be changed by the current owner via setOwner
+Curry-Howard correspondence
+---------------------------
 
-Return Values:
---------------
+So how do we relate these proofs to Idris programs? It turns out that there is
+a correspondence between constructive logic and type theory. They have the same
+structure and we can switch back and forth between the two notations.
 
--  The address of the factory owner
+The way that this works is that a proposition is a type so...
 
-.. _IUniswapV3Factory-feeAmountTickSpacing-uint24-:
+.. code-block:: idris
 
-Function ``feeAmountTickSpacing(uint24 fee) → int24``
-=====================================================
+    Main> 1 + 1 = 2
+    2 = 2
 
-A fee amount can never be removed, so this value should be hard coded or
-cached in the calling context
+    Main> :t 1 + 1 = 2
+    (fromInteger 1 + fromInteger 1) === fromInteger 2 : Type
 
-Parameters:
------------
+...is a proposition and it is also a type. The
+following will also produce an equality type:
 
--  ``fee``: The enabled fee, denominated in hundredths of a bip. Returns
-   0 in case of unenabled fee
 
-.. _return-values-1:
+.. code-block:: idris
 
-Return Values:
---------------
+   Main> 1 + 1 = 3
+   2 = 3
 
--  The tick spacing
+Both of these are valid propositions so both are valid equality types. But how
+do we represent a true judgment? That is, how do we denote 1+1=2 is true but not
+1+1=3?  A type that is true is inhabited, that is, it can be constructed. An
+equality type has only one constructor 'Refl' so a proof of 1+1=2 is
 
-.. _IUniswapV3Factory-getPool-address-address-uint24-:
+.. code-block:: idris
 
-Function ``getPool(address tokenA, address tokenB, uint24 fee) → address pool``
-===============================================================================
+   onePlusOne : 1+1=2
+   onePlusOne = Refl
 
-tokenA and tokenB may be passed in either token0/token1 or token1/token0
-order
+Now that we can represent propositions as types other aspects of
+propositional logic can also be translated to types as follows:
 
-.. _parameters-1:
++----------+-------------------+--------------------------+
+|          | propositions      | example of possible type |
++----------+-------------------+--------------------------+
+| A        | x=y               |                          |
++----------+-------------------+--------------------------+
+| B        | y=z               |                          |
++----------+-------------------+--------------------------+
+| and      | A /\ B            | Pair(x=y,y=z)            |
++----------+-------------------+--------------------------+
+| or       | A \/ B            | Either(x=y,y=z)          |
++----------+-------------------+--------------------------+
+| implies  | A -> B            | (x=y) -> (y=x)           |
++----------+-------------------+--------------------------+
+| for all  | y=z               |                          |
++----------+-------------------+--------------------------+
+| exists   | y=z               |                          |
++----------+-------------------+--------------------------+
 
-Parameters:
------------
 
--  ``tokenA``: The contract address of either token0 or token1
+And (conjunction)
+-----------------
 
--  ``tokenB``: The contract address of the other token
+We can have a type which corresponds to conjunction:
 
--  ``fee``: The fee collected upon every swap in the pool, denominated
-   in hundredths of a bip
+.. code-block:: idris
 
-.. _return-values-2:
+   AndIntro : a -> b -> A a b
 
-Return Values:
---------------
+There is a built in type called 'Pair'.
 
--  pool The pool address
+Or (disjunction)
+----------------
 
-.. _IUniswapV3Factory-createPool-address-address-uint24-:
+We can have a type which corresponds to disjunction:
 
-Function ``createPool(address tokenA, address tokenB, uint24 fee) → address pool``
-==================================================================================
+.. code-block:: idris
 
-tokenA and tokenB may be passed in either order: token0/token1 or
-token1/token0. tickSpacing is retrieved
+   data Or : Type -> Type -> Type where
+   OrIntroLeft : a -> A a b
+   OrIntroRight : b -> A a b
 
-from the fee. The call will revert if the pool already exists, the fee
-is invalid, or the token arguments
+There is a built in type called 'Either'.
 
-are invalid.
+Definitional and Propositional Equalities
+-----------------------------------------
 
-.. _parameters-2:
+We have seen that  we can 'prove' a type by finding a way to construct a term.
+In the case of equality types there is only one constructor which is ``Refl``.
+We have also seen that each side of the equation does not have to be identical
+like '2=2'. It is enough that both sides are *definitionally equal* like this:
 
-Parameters:
------------
+.. code-block:: idris
 
--  ``tokenA``: One of the two tokens in the desired pool
+   onePlusOne : 1+1=2
+   onePlusOne = Refl
 
--  ``tokenB``: The other of the two tokens in the desired pool
+Both sides of this equation normalise to 2 and so Refl matches and the
+proposition is proved.
 
--  ``fee``: The desired fee for the pool
+We don't have to stick to terms; we can also use symbolic parameters so the
+following type checks:
 
-.. _return-values-3:
+.. code-block:: idris
 
-Return Values:
---------------
+   varIdentity : m = m
+   varIdentity = Refl
 
--  pool The address of the newly created pool
+If a proposition/equality type is not definitionally equal but is still true
+then it is *propositionally equal*. In this case we may still be able to prove
+it but some steps in the proof may require us to add something into the terms
+or at least to take some sideways steps to get to a proof.
 
-.. _IUniswapV3Factory-setOwner-address-:
+Especially when working with equalities containing variable terms (inside
+functions) it can be hard to know which equality types are definitionally equal,
+in this example ``plusReducesL`` is *definitionally equal* but ``plusReducesR`` is
+not (although it is *propositionally equal*). The only difference between
+them is the order of the operands.
 
-Function ``setOwner(address _owner)``
-=====================================
+.. code-block:: idris
 
-Must be called by the current owner
+   plusReducesL : (n:Nat) -> plus Z n = n
+   plusReducesL n = Refl
 
-.. _parameters-3:
+   plusReducesR : (n:Nat) -> plus n Z = n
+   plusReducesR n = Refl
 
-Parameters:
------------
+Checking ``plusReducesR`` gives the following error:
 
--  ``_owner``: The new owner of the factory
 
-.. _IUniswapV3Factory-enableFeeAmount-uint24-int24-:
+.. code-block:: idris
 
-Function ``enableFeeAmount(uint24 fee, int24 tickSpacing)``
-===========================================================
+    Proofs.idr:21:18--23:1:While processing right hand side of Main.plusReducesR at Proofs.idr:21:1--23:1:
+    Can't solve constraint between:
+            plus n Z
+    and
+            n
 
-Fee amounts may never be removed once enabled
+So why is ``Refl`` able to prove some equality types but not others?
 
-.. _parameters-4:
+The first answer is that ``plus`` is defined by recursion on its first
+argument. So, when the first argument is ``Z``, it reduces, but not when the
+second argument is ``Z``.
 
-Parameters:
------------
+If an equality type can be proved/constructed by using ``Refl`` alone it is known
+as a *definitional equality*. In order to be definitionally equal both sides
+of the equation must normalise to the same value.
 
--  ``fee``: The fee amount to enable, denominated in hundredths of a bip
-   (i.e. 1e-6)
+So when we type ``1+1`` in Idris it is immediately reduced to 2 because
+definitional equality is built in
 
--  ``tickSpacing``: The spacing between ticks to be enforced for all
-   pools created with the given fee amount
+.. code-block:: idris
 
-.. _IUniswapV3Factory-OwnerChanged-address-address-:
+    Main> 1+1
+    2
 
-Event ``OwnerChanged(address oldOwner, address newOwner)``
-==========================================================
-
-No description
-
-.. _parameters-5:
-
-Parameters:
------------
-
--  ``oldOwner``: The owner before the owner was changed
-
--  ``newOwner``: The owner after the owner was changed
-
-.. _IUniswapV3Factory-PoolCreated-address-address-uint24-int24-address-:
-
-Event ``PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)``
-==================================================================================================
-
-No description
-
-.. _parameters-6:
-
-Parameters:
------------
-
--  ``token0``: The first token of the pool by address sort order
-
--  ``token1``: The second token of the pool by address sort order
-
--  ``fee``: The fee collected upon every swap in the pool, denominated
-   in hundredths of a bip
-
--  ``tickSpacing``: The minimum number of ticks between initialized
-   ticks
-
--  ``pool``: The address of the created pool
-
-.. _IUniswapV3Factory-FeeAmountEnabled-uint24-int24-:
-
-Event ``FeeAmountEnabled(uint24 fee, int24 tickSpacing)``
-=========================================================
-
-No description
-
-.. _parameters-7:
-
-Parameters:
------------
-
--  ``fee``: The enabled fee, denominated in hundredths of a bip
-
--  ``tickSpacing``: The minimum number of ticks between initialized
-   ticks for pools created with the given fee
+In the following pages we discuss how to resolve propositional equalities.
