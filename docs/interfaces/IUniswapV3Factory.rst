@@ -10,7 +10,7 @@ some fundamental concepts:
 Propositions and Judgments
 ==========================
 
-Propositions are the subject of our proofs. Before the proof, we can't
+Propositionssssss are the subject of our proofs. Before the proof, we can't
 formally say if they are true or not. If the proof is successful then the
 result is a 'judgment'.  For instance, if the ``proposition`` is,
 
