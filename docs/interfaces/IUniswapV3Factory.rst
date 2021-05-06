@@ -1,3 +1,12 @@
+Before we discuss the details of theorem proving in Idris, we will describe
+some fundamental concepts:
+
+-  Propositions and judgments
+-  Boolean and constructive logic
+-  Curry-Howard correspondence
+-  Definitional and propositional equalities
+-  Axiomatic and constructive approaches
+
 Functions:
 ==========
 
