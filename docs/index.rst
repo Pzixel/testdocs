@@ -3,7 +3,7 @@ Functions:
 
 -  ```owner()`` <testlabel>`__
 
--  ```feeAmountTickSpacing(uint24 fee)`` :ref:`IUniswapV3Factory-feeAmountTickSpacing-uint24-`
+-  :ref:`feeAmountTickSpacing(uint24 fee)<IUniswapV3Factory-feeAmountTickSpacing-uint24->`
 
 -  ```getPool(address tokenA, address tokenB, uint24 fee)`` :ref:`_IUniswapV3Factory-feeAmountTickSpacing-uint24-`
 
