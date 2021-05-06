@@ -1,4 +1,4 @@
-.. _docs-index:
+.. _interfaces-index:
 
 #########################
 Blabla
@@ -6,10 +6,7 @@ Blabla
 
 Bla
 
-.. note::
-   Note here
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 0
 
-   interfaces/index
+   IUniswapV3Factory
