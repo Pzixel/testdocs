@@ -13,3 +13,4 @@ Bla
    :maxdepth: 1
 
    interfaces/index
+   proofs/index
