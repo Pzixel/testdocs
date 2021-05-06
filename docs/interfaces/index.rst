@@ -10,3 +10,4 @@ Bla
    :maxdepth: 1
 
    IUniswapV3Factory
+   IUniswapV3FactoryAnother
