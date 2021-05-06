@@ -7,9 +7,10 @@ Functions:
 
 -  :ref:`getPool(address tokenA, address tokenB, uint24   fee) <IUniswapV3Factory-getPool-address-address-uint24->`
 
--  ```createPool(address tokenA, address tokenB, uint24 fee)`` <#IUniswapV3Factory-createPool-address-address-uint24->`__
+-  `createPool(address tokenA, address tokenB, uint24
+   fee) <#IUniswapV3Factory-createPool-address-address-uint24->`__
 
--  ```setOwner(address _owner)`` <#IUniswapV3Factory-setOwner-address->`__
+-  `setOwner(address \_owner) <IUniswapV3Factory-setOwner-address->`__
 
 -  ```enableFeeAmount(uint24 fee, int24 tickSpacing)`` <#IUniswapV3Factory-enableFeeAmount-uint24-int24->`__
 
