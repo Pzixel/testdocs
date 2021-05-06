@@ -18,8 +18,4 @@ A tutorial on theorem proving in Idris 2.
 .. toctree::
    :maxdepth: 1
 
-   definitional
-   pluscomm
-   inductive
-   patterns
-   propositional
+   IUniswapV3Factory
