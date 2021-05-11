@@ -9,7 +9,6 @@ test
    BitMathTest.rst
    FullMathEchidnaTest.rst
    FullMathTest.rst
-   index.rst
    LiquidityMathTest.rst
    LowGasSafeMathEchidnaTest.rst
    MockTimeUniswapV3Pool.rst

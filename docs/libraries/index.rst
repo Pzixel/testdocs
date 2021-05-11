@@ -9,7 +9,6 @@ libraries
    FixedPoint128.rst
    FixedPoint96.rst
    FullMath.rst
-   index.rst
    LiquidityMath.rst
    LowGasSafeMath.rst
    Oracle.rst

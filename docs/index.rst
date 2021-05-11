@@ -8,7 +8,6 @@ docs
    interfaces/index
    libraries/index
    test/index
-   index.rst
    NoDelegateCall.rst
    UniswapV3Factory.rst
    UniswapV3Pool.rst

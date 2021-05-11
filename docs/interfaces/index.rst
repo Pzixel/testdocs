@@ -8,7 +8,6 @@ interfaces
    callback/index
    pool/index
    IERC20Minimal.rst
-   index.rst
    IUniswapV3Factory.rst
    IUniswapV3FactoryAnother.rst
    IUniswapV3Pool.rst
