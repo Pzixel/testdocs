@@ -18,7 +18,12 @@ Functions
 ``initialize(struct Oracle.Observation[65535] self, uint32 time) → uint16 cardinality, uint16 cardinalityNext``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``self``: The stored oracle array
+No description
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``self``: The stored oracle array
 
 -  ``time``: The time of the oracle initialization, via block.timestamp
    truncated to uint32
@@ -40,6 +45,8 @@ the index is at the end of the allowable array length (according to
 cardinality), and the next cardinality is greater than the current one,
 cardinality may be increased. This restriction is created to preserve
 ordering.
+
+.. _parameters-1:
 
 Parameters:
 ^^^^^^^^^^^
@@ -74,7 +81,14 @@ Return Values:
 ``grow(struct Oracle.Observation[65535] self, uint16 current, uint16 next) → uint16``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``self``: The stored oracle array
+No description
+
+.. _parameters-2:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``self``: The stored oracle array
 
 -  ``current``: The current next cardinality of the oracle array
 
@@ -97,7 +111,7 @@ cumulative values. If called with a timestamp falling between two
 observations, returns the counterfactual accumulator values at exactly
 the timestamp between the two observations.
 
-.. _parameters-1:
+.. _parameters-3:
 
 Parameters:
 ^^^^^^^^^^^
@@ -134,7 +148,7 @@ Return Values:
 
 Reverts if ``secondsAgos`` > oldest observation
 
-.. _parameters-2:
+.. _parameters-4:
 
 Parameters:
 ^^^^^^^^^^^

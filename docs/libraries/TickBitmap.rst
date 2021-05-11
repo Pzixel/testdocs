@@ -12,8 +12,12 @@ Functions
 ``flipTick(mapping(int16 => uint256) self, int24 tick, int24 tickSpacing)``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``self``: The mapping in which to flip
-the tick
+No description
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``self``: The mapping in which to flip the tick
 
 -  ``tick``: The tick to flip
 
@@ -22,8 +26,14 @@ the tick
 ``nextInitializedTickWithinOneWord(mapping(int16 => uint256) self, int24 tick, int24 tickSpacing, bool lte) → int24 next, bool initialized``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``self``: The mapping in which to
-compute the next initialized tick
+No description
+
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``self``: The mapping in which to compute the next initialized tick
 
 -  ``tick``: The starting tick
 

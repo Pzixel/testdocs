@@ -1,8 +1,6 @@
 UniswapV3Pool
 =============
 
-agasgasffnffnf
-
 Functions
 ---------
 
@@ -88,15 +86,26 @@ Parameters:
 ``initialize(uint160 sqrtPriceX96)``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-not locked because it initializes unlocked #### Parameters: -
-``sqrtPriceX96``: the initial sqrt price of the pool as a Q64.96
+not locked because it initializes unlocked
+
+.. _parameters-3:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``sqrtPriceX96``: the initial sqrt price of the pool as a Q64.96
 
 ``mint(address recipient, int24 tickLower, int24 tickUpper, uint128 amount, bytes data) → uint256 amount0, uint256 amount1``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-noDelegateCall is applied indirectly via \_modifyPosition ####
-Parameters: - ``recipient``: The address for which the liquidity will be
-created
+noDelegateCall is applied indirectly via \_modifyPosition
+
+.. _parameters-4:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``recipient``: The address for which the liquidity will be created
 
 -  ``tickLower``: The lower tick of the position in which to add
    liquidity
@@ -130,7 +139,7 @@ may pass any value greater than the actual tokens owed,
 e.g. type(uint128).max. Tokens owed may be from accumulated swap fees or
 burned liquidity.
 
-.. _parameters-3:
+.. _parameters-5:
 
 Parameters:
 ^^^^^^^^^^^
@@ -161,9 +170,15 @@ Return Values:
 ``burn(int24 tickLower, int24 tickUpper, uint128 amount) → uint256 amount0, uint256 amount1``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-noDelegateCall is applied indirectly via \_modifyPosition ####
-Parameters: - ``tickLower``: The lower tick of the position for which to
-burn liquidity
+noDelegateCall is applied indirectly via \_modifyPosition
+
+.. _parameters-6:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``tickLower``: The lower tick of the position for which to burn
+   liquidity
 
 -  ``tickUpper``: The upper tick of the position for which to burn
    liquidity
@@ -185,7 +200,7 @@ Return Values:
 The caller of this method receives a callback in the form of
 IUniswapV3SwapCallback#uniswapV3SwapCallback
 
-.. _parameters-4:
+.. _parameters-7:
 
 Parameters:
 ^^^^^^^^^^^
@@ -225,7 +240,7 @@ underlying tokens pro-rata to currently in-range liquidity providers by
 calling with 0 amount{0,1} and sending the donation amount(s) from the
 callback
 
-.. _parameters-5:
+.. _parameters-8:
 
 Parameters:
 ^^^^^^^^^^^
@@ -242,16 +257,29 @@ Parameters:
 ``setFeeProtocol(uint8 feeProtocol0, uint8 feeProtocol1)``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``feeProtocol0``: new protocol fee for
-token0 of the pool
+No description
+
+.. _parameters-9:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``feeProtocol0``: new protocol fee for token0 of the pool
 
 -  ``feeProtocol1``: new protocol fee for token1 of the pool
 
 ``collectProtocol(address recipient, uint128 amount0Requested, uint128 amount1Requested) → uint128 amount0, uint128 amount1``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``recipient``: The address to which
-collected protocol fees should be sent
+No description
+
+.. _parameters-10:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``recipient``: The address to which collected protocol fees should be
+   sent
 
 -  ``amount0Requested``: The maximum amount of token0 to send, can be 0
    to collect fees in only token1

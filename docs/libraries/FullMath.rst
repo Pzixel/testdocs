@@ -14,7 +14,11 @@ Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Credit to Remco Bloemen under MIT license https://xn–2-umb.com/21/muldiv
-#### Parameters: - ``a``: The multiplicand
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``a``: The multiplicand
 
 -  ``b``: The multiplier
 
@@ -28,7 +32,14 @@ Return Values:
 ``mulDivRoundingUp(uint256 a, uint256 b, uint256 denominator) → uint256 result``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``a``: The multiplicand
+No description
+
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``a``: The multiplicand
 
 -  ``b``: The multiplier
 

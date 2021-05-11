@@ -178,7 +178,14 @@ Return Values:
 ``getAmount0Delta(uint160 sqrtRatioAX96, uint160 sqrtRatioBX96, int128 liquidity) → int256 amount0``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``sqrtRatioAX96``: A sqrt price
+No description
+
+.. _parameters-6:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``sqrtRatioAX96``: A sqrt price
 
 -  ``sqrtRatioBX96``: Another sqrt price
 
@@ -196,7 +203,14 @@ Return Values:
 ``getAmount1Delta(uint160 sqrtRatioAX96, uint160 sqrtRatioBX96, int128 liquidity) → int256 amount1``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``sqrtRatioAX96``: A sqrt price
+No description
+
+.. _parameters-7:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``sqrtRatioAX96``: A sqrt price
 
 -  ``sqrtRatioBX96``: Another sqrt price
 

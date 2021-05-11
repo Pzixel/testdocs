@@ -10,7 +10,12 @@ Functions
 ``add(uint256 x, uint256 y) → uint256 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``x``: The augend
+No description
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``x``: The augend
 
 -  ``y``: The addend
 
@@ -22,7 +27,14 @@ Return Values:
 ``sub(uint256 x, uint256 y) → uint256 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``x``: The minuend
+No description
+
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``x``: The minuend
 
 -  ``y``: The subtrahend
 
@@ -36,7 +48,14 @@ Return Values:
 ``mul(uint256 x, uint256 y) → uint256 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``x``: The multiplicand
+No description
+
+.. _parameters-2:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``x``: The multiplicand
 
 -  ``y``: The multiplier
 
@@ -50,7 +69,14 @@ Return Values:
 ``add(int256 x, int256 y) → int256 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``x``: The augend
+No description
+
+.. _parameters-3:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``x``: The augend
 
 -  ``y``: The addend
 
@@ -64,7 +90,14 @@ Return Values:
 ``sub(int256 x, int256 y) → int256 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``x``: The minuend
+No description
+
+.. _parameters-4:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``x``: The minuend
 
 -  ``y``: The subtrahend
 

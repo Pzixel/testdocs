@@ -12,8 +12,12 @@ Functions
 ``get(mapping(bytes32 => struct Position.Info) self, address owner, int24 tickLower, int24 tickUpper) → struct Position.Info position``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``self``: The mapping containing all
-user positions
+No description
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``self``: The mapping containing all user positions
 
 -  ``owner``: The address of the position owner
 
@@ -29,8 +33,14 @@ Return Values:
 ``update(struct Position.Info self, int128 liquidityDelta, uint256 feeGrowthInside0X128, uint256 feeGrowthInside1X128)``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``self``: The individual position to
-update
+No description
+
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``self``: The individual position to update
 
 -  ``liquidityDelta``: The change in pool liquidity as a result of the
    position update

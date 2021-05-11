@@ -65,7 +65,14 @@ Events
 ``SwapCallback(int256 amount0Delta, int256 amount1Delta)``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description ###
-``MintCallback(uint256 amount0Owed, uint256 amount1Owed)`` No
-description ### ``FlashCallback(uint256 fee0, uint256 fee1)`` No
-description
+No description
+
+``MintCallback(uint256 amount0Owed, uint256 amount1Owed)``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No description
+
+``FlashCallback(uint256 fee0, uint256 fee1)``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No description

@@ -121,12 +121,23 @@ Events
 ``OwnerChanged(address oldOwner, address newOwner)``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``oldOwner``: The owner before the
-owner was changed
+No description
+
+.. _parameters-5:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``oldOwner``: The owner before the owner was changed
 
 -  ``newOwner``: The owner after the owner was changed ###
    ``PoolCreated(address token0, address token1, uint24 fee, int24 tickSpacing, address pool)``
-   No description #### Parameters:
+   No description
+
+.. _parameters-6:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``token0``: The first token of the pool by address sort order
 
@@ -140,7 +151,11 @@ owner was changed
 
 -  ``pool``: The address of the created pool ###
    ``FeeAmountEnabled(uint24 fee, int24 tickSpacing)`` No description
-   #### Parameters:
+
+.. _parameters-7:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``fee``: The enabled fee, denominated in hundredths of a bip
 

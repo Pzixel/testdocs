@@ -10,20 +10,25 @@ Functions
 ``slot0() → uint160 sqrtPriceX96, int24 tick, uint16 observationIndex, uint16 observationCardinality, uint16 observationCardinalityNext, uint8 feeProtocol, bool unlocked``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Return Values: - sqrtPriceX96 The current price of
-the pool as a sqrt(token1/token0) Q64.96 value tick The current tick of
-the pool, i.e. according to the last tick transition that was run. This
-value may not always be equal to
-SqrtTickMath.getTickAtSqrtRatio(sqrtPriceX96) if the price is on a tick
-boundary. observationIndex The index of the last oracle observation that
-was written, observationCardinality The current maximum number of
-observations stored in the pool, observationCardinalityNext The next
-maximum number of observations, to be updated when the observation.
-feeProtocol The protocol fee for both tokens of the pool. Encoded as two
-4 bit values, where the protocol fee of token1 is shifted 4 bits and the
-protocol fee of token0 is the lower 4 bits. Used as the denominator of a
-fraction of the swap fee, e.g. 4 means 1/4th of the swap fee. unlocked
-Whether the pool is currently locked to reentrancy
+No description
+
+Return Values:
+^^^^^^^^^^^^^^
+
+-  sqrtPriceX96 The current price of the pool as a sqrt(token1/token0)
+   Q64.96 value tick The current tick of the pool, i.e. according to the
+   last tick transition that was run. This value may not always be equal
+   to SqrtTickMath.getTickAtSqrtRatio(sqrtPriceX96) if the price is on a
+   tick boundary. observationIndex The index of the last oracle
+   observation that was written, observationCardinality The current
+   maximum number of observations stored in the pool,
+   observationCardinalityNext The next maximum number of observations,
+   to be updated when the observation. feeProtocol The protocol fee for
+   both tokens of the pool. Encoded as two 4 bit values, where the
+   protocol fee of token1 is shifted 4 bits and the protocol fee of
+   token0 is the lower 4 bits. Used as the denominator of a fraction of
+   the swap fee, e.g. 4 means 1/4th of the swap fee. unlocked Whether
+   the pool is currently locked to reentrancy
 
 ``feeGrowthGlobal0X128() → uint256``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,7 +53,14 @@ This value has no relationship to the total liquidity across all ticks
 ``ticks(int24 tick) → uint128 liquidityGross, int128 liquidityNet, uint256 feeGrowthOutside0X128, uint256 feeGrowthOutside1X128, int56 tickCumulativeOutside, uint160 secondsPerLiquidityOutsideX128, uint32 secondsOutside, bool initialized``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``tick``: The tick to look up
+No description
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``tick``: The tick to look up
+
+.. _return-values-1:
 
 Return Values:
 ^^^^^^^^^^^^^^
@@ -78,10 +90,17 @@ No description
 ``positions(bytes32 key) → uint128 _liquidity, uint256 feeGrowthInside0LastX128, uint256 feeGrowthInside1LastX128, uint128 tokensOwed0, uint128 tokensOwed1``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``key``: The position’s key is a hash
-of a preimage composed by the owner, tickLower and tickUpper
+No description
 
-.. _return-values-1:
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``key``: The position’s key is a hash of a preimage composed by the
+   owner, tickLower and tickUpper
+
+.. _return-values-2:
 
 Return Values:
 ^^^^^^^^^^^^^^
@@ -102,12 +121,14 @@ You most likely want to use #observe() instead of this method to get an
 observation as of some amount of time ago, rather than at a specific
 index in the array.
 
+.. _parameters-2:
+
 Parameters:
 ^^^^^^^^^^^
 
 -  ``index``: The element of the observations array to fetch
 
-.. _return-values-2:
+.. _return-values-3:
 
 Return Values:
 ^^^^^^^^^^^^^^

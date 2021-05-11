@@ -19,7 +19,12 @@ Parameters:
 -  ``tick``: The initial tick of the pool, i.e. log base 1.0001 of the
    starting price of the pool ###
    ``Mint(address sender, address owner, int24 tickLower, int24 tickUpper, uint128 amount, uint256 amount0, uint256 amount1)``
-   No description #### Parameters:
+   No description
+
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``sender``: The address that minted the liquidity
 
@@ -40,7 +45,7 @@ Parameters:
    Collect events may be emitted with zero amount0 and amount1 when the
    caller chooses not to collect fees
 
-.. _parameters-1:
+.. _parameters-2:
 
 Parameters:
 ^^^^^^^^^^^
@@ -58,7 +63,7 @@ Parameters:
    Does not withdraw any fees earned by the liquidity position, which
    must be withdrawn via #collect
 
-.. _parameters-2:
+.. _parameters-3:
 
 Parameters:
 ^^^^^^^^^^^
@@ -75,7 +80,12 @@ Parameters:
 
 -  ``amount1``: The amount of token1 withdrawn ###
    ``Swap(address sender, address recipient, int256 amount0, int256 amount1, uint160 sqrtPriceX96, int24 tick)``
-   No description #### Parameters:
+   No description
+
+.. _parameters-4:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``sender``: The address that initiated the swap call, and that
    received the callback
@@ -91,7 +101,12 @@ Parameters:
 
 -  ``tick``: The log base 1.0001 of price of the pool after the swap ###
    ``Flash(address sender, address recipient, uint256 amount0, uint256 amount1, uint256 paid0, uint256 paid1)``
-   No description #### Parameters:
+   No description
+
+.. _parameters-5:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``sender``: The address that initiated the swap call, and that
    received the callback
@@ -111,7 +126,7 @@ Parameters:
    observationCardinalityNext is not the observation cardinality until
    an observation is written at the index just before a mint/swap/burn.
 
-.. _parameters-3:
+.. _parameters-6:
 
 Parameters:
 ^^^^^^^^^^^
@@ -122,7 +137,12 @@ Parameters:
 -  ``observationCardinalityNextNew``: The updated value of the next
    observation cardinality ###
    ``SetFeeProtocol(uint8 feeProtocol0Old, uint8 feeProtocol1Old, uint8 feeProtocol0New, uint8 feeProtocol1New)``
-   No description #### Parameters:
+   No description
+
+.. _parameters-7:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``feeProtocol0Old``: The previous value of the token0 protocol fee
 
@@ -132,7 +152,12 @@ Parameters:
 
 -  ``feeProtocol1New``: The updated value of the token1 protocol fee ###
    ``CollectProtocol(address sender, address recipient, uint128 amount0, uint128 amount1)``
-   No description #### Parameters:
+   No description
+
+.. _parameters-8:
+
+Parameters:
+^^^^^^^^^^^
 
 -  ``sender``: The address that collects the protocol fees
 

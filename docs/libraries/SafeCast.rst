@@ -9,7 +9,12 @@ Functions
 ``toUint160(uint256 y) → uint160 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``y``: The uint256 to be downcasted
+No description
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``y``: The uint256 to be downcasted
 
 Return Values:
 ^^^^^^^^^^^^^^
@@ -19,7 +24,14 @@ Return Values:
 ``toInt128(int256 y) → int128 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``y``: The int256 to be downcasted
+No description
+
+.. _parameters-1:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``y``: The int256 to be downcasted
 
 .. _return-values-1:
 
@@ -31,7 +43,14 @@ Return Values:
 ``toInt256(uint256 y) → int256 z``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No description #### Parameters: - ``y``: The uint256 to be casted
+No description
+
+.. _parameters-2:
+
+Parameters:
+^^^^^^^^^^^
+
+-  ``y``: The uint256 to be casted
 
 .. _return-values-2:
 
