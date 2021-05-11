@@ -1,13 +1,16 @@
-.. _interfaces-index:
 
-#####################
-Some interfaces here!
-#####################
-
-Bla
+interfaces
+======================================
 
 .. toctree::
    :maxdepth: 1
 
-   IUniswapV3Factory
-   IUniswapV3FactoryAnother
+   callback/index
+   pool/index
+   IERC20Minimal.rst
+   index.rst
+   IUniswapV3Factory.rst
+   IUniswapV3FactoryAnother.rst
+   IUniswapV3Pool.rst
+   IUniswapV3PoolDeployer.rst 			
+			

@@ -1,13 +1,16 @@
-.. Idris Manual documentation master file, created by
-   sphinx-quickstart on Sat Feb 28 20:41:47 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Documentation hoohjoh
+docs
 ======================================
 
 .. toctree::
    :maxdepth: 1
 
    interfaces/index
-   proofs/index 
+   libraries/index
+   test/index
+   index.rst
+   NoDelegateCall.rst
+   UniswapV3Factory.rst
+   UniswapV3Pool.rst
+   UniswapV3PoolDeployer.rst 			
+			
