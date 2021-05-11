@@ -1,11 +1,3 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# Idris Manual documentation build configuration file, created by
-# sphinx-quickstart on Apr 13, 2020.
-#
-# This file is execfile()d with the current directory set to its
-# containing dir.
-#
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
@@ -25,9 +17,9 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 # General information about the project.
-project = 'Idris2'
-copyright = '2020, The Idris Community'
-author = 'The Idris Community'
+project = '1Inch test doc'
+copyright = '2021, 1Inch'
+author = 'The 1Inch Community'
 
 # The short X.Y version.
 version = '0.0'
@@ -80,7 +72,7 @@ html_theme_options = {
 html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'IdrisManualdoc'
+htmlhelp_basename = '1InchDoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -88,7 +80,7 @@ latex_title_page = r'''
 \begin{titlepage}
     \vspace*{\fill}
     \begin{center}
-        \includegraphics[width=0.25\textwidth]{idris-512x512.png}\par
+        \includegraphics[width=0.25\textwidth]{1inch-512x512.png}\par
         \vspace{1cm}
         {\huge\sffamily\bfseries \makeatletter\@title\makeatother\par}
         \vspace{1cm}
@@ -162,8 +154,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-#  ('index',  'idris-documentation-complete.tex',  u'Documentation for the Idris Language',    u'The Idris Community', 'report'),
-   ('tutorial/index',  'idris-tutorial.tex',  u'The Idris Tutorial',    u'The Idris Community', 'howto'),
+#  ('index',  '1inch-documentation-complete.tex',  u'Documentation for the 1Inch contracts',    u'The 1Inch Company', 'report'),
 ]
 
 
@@ -172,7 +163,7 @@ latex_show_url = 'footnote'
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = '../../icons/idris-512x512.png'
+latex_logo = '../icons/1inch.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -196,7 +187,7 @@ latex_logo = '../../icons/idris-512x512.png'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'idrismanual', u'Idris Manual Documentation',
+    (master_doc, '1inchdoc', u'1Inch Documentation',
      [author], 1)
 ]
 
@@ -210,8 +201,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'IdrisManual', u'Idris Manual Documentation',
-   author, 'IdrisManual', 'One line description of project.',
+  (master_doc, '1InchDoc', u'1Inch Documentation',
+   author, '1InchDoc', 'One line description of project.',
    'Miscellaneous'),
 ]
 
